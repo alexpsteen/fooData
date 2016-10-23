@@ -8,10 +8,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.alexsteen.tipcalculator.MainActivity">
+    tools:context="com.example.alexsteen.tipcalculator.MainActivity"
+    android:background="#333333">
 
     <TextView
-        android:text="Hello World!"
+        android:text="Tip Calc"
+        android:textColor="@android:color/white"
+        android:fontFamily="cursive"
+        android:textSize="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+
 </RelativeLayout>
