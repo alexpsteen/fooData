@@ -1,5 +1,6 @@
 package com.example.alexsteen.foodata;
 
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private Button loginBtn;
     private Button registerBtn;
 
+    private ConnectionClass connectionClass;
+    private ProgressBar progressBar;
+
 //    private FirebaseAuth fbAuth;
 //    private FirebaseAuth.AuthStateListener fbAuthListener;
 
@@ -37,44 +42,20 @@ public class MainActivity extends AppCompatActivity {
         loginBtn = (Button) findViewById(R.id.loginBtn);
         registerBtn = (Button) findViewById(R.id.registerBtn);
 
-//        fbAuth = FirebaseAuth.getInstance();
-//        fbAuthListener = new FirebaseAuth.AuthStateListener() {
-//            @Override
-//            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-//                if (fbAuth.getCurrentUser() != null) {
-//                    //TODO: Start next page intent
-//                }
-//            }
-//        }
+        ConnectionClass connectionClass = new ConnectionClass();
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
 
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn();
+                Login login = new Login(usernameField.getText().toString(), passwordField.getText().toString());
+                login.execute();
             }
         });
-    }
 
-    private void signIn() {
-        String username = usernameField.getText().toString();
-        String password = passwordField.getText().toString();
-
-
-        if (TextUtils.isEmpty(username)) {
-            Toast.makeText(MainActivity.this, "Please enter username", Toast.LENGTH_LONG).show();
-        } else if (TextUtils.isEmpty(password)) {
-            Toast.makeText(MainActivity.this, "Please enter password", Toast.LENGTH_LONG).show();
-        } else {
-//            fbAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                @Override
-//                public void onComplete(@NonNull Task<AuthResult> task) {
-//                    if (!task.isSuccessful()) {
-//                        Toast.makeText(MainActivity.this, "Unable to sign-in", Toast.LENGTH_LONG).show();
-//                    }
-//                }
-//            });
-        }
     }
 
 }
+
