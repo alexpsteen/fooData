@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "824434073234",
+    "firebase_url": "https://foodata-54c11.firebaseio.com",
+    "project_id": "foodata-54c11",
+    "storage_bucket": "foodata-54c11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824434073234:android:9e57616264867beb",
+        "android_client_info": {
+          "package_name": "com.example.alexsteen.foodata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824434073234-mqpvif1brtnmr6o4eou249g83rdpda8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYjmlWbfOeHU5g1HCKXFulZpSsrc8ESyE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,7 +9,6 @@
     </style>
 
     <style name="login_layout" parent="android:Theme.Holo.Light">
-        <solid color="#FFFFFF"/>
 
     </style>
 
