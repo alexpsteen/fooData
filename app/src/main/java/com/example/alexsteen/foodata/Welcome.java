@@ -38,7 +38,7 @@ public class Welcome extends AppCompatActivity {
     }
 
     protected void nextScreen() {
-        Intent i = new Intent(Welcome.this, MainScreen.class);
+        Intent i = new Intent(Welcome.this, Home.class);
         startActivity(i);
         finish();
 //        this.overridePendingTransition(0,0);
