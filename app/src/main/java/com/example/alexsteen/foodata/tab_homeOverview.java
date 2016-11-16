@@ -22,12 +22,12 @@ public class tab_homeOverview extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(R.layout.tab_homeoverview, container, false);
 
         //Overview
-        TextView today = (TextView) rootView.findViewById(R.id.date);
-
-
-        Date day = new Date();
-        SimpleDateFormat sDate = new SimpleDateFormat("MMMM dd, yyyy");
-        today.setText(sDate.format(day));
+//        TextView today = (TextView) rootView.findViewById(R.id.date);
+//
+//
+//        Date day = new Date();
+//        SimpleDateFormat sDate = new SimpleDateFormat("MMMM dd, yyyy");
+//        today.setText(sDate.format(day));
 
 
         return rootView;
