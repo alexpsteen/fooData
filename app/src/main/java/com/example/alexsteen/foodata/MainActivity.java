@@ -57,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 Intent i = new Intent(MainActivity.this, Welcome.class);
                 progressBar.setVisibility(View.GONE);
-                cb.setVisibility(View.VISIBLE);
-                try {
-                    Thread.sleep(1000, 0);
-                } catch (InterruptedException e) {
-                    //do anything?
-                }
-                cb.setVisibility(View.GONE);
+//                cb.setVisibility(View.VISIBLE);
+//                try {
+//                    Thread.sleep(1000, 0);
+//                } catch (InterruptedException e) {
+//                    //do anything?
+//                }
+//                cb.setVisibility(View.GONE);
                 startActivity(i);
                 finish();
 
@@ -168,11 +168,12 @@ public class MainActivity extends AppCompatActivity {
                 connection = DriverManager.getConnection(connectionURL);
             } catch (SQLException e) {
 //            Log.e("ERROR", e.getMessage());
+                System.out.println("SQL^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             } catch (ClassNotFoundException e) {
 //            Log.e("ERROR", e.getMessage());
-                System.out.println("CLASS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             } catch (Exception e) {
 //            Log.e("ERROR", e.getMessage());
+                System.out.println("EXCEPT^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             }
 
             return connection;
